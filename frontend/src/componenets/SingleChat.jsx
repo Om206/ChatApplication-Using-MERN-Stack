@@ -18,7 +18,7 @@ import axios from "axios";
 import "./styles.css";
 import ScrollableChat from "./ScrollableChat";
 
-const ENDPOINT = "https://cra.link/deployment";
+const ENDPOINT = "https://chat-xjp3.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ featchAgain, setFetchAgain }) => {
