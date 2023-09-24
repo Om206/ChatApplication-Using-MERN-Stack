@@ -15,8 +15,8 @@
   "description": "nodejs/express",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "server": "nodemon app.js",
+    "start": "nodemon server/app.js",
+    "server": "nodemon server/app.js",
     "build": "npm install --legacy-peer-deps --prefix server && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Op",
