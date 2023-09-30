@@ -80,6 +80,7 @@ const MyChats = ({ featchAgain }) => {
         height={"100%"}
         borderRadius={"0.5rem"}
         overflowY={"hidden"}
+        className="messages"
       >
         {chats ? (
           <Stack overflowY="scroll">

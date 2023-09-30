@@ -198,6 +198,8 @@ const SingleChat = ({ featchAgain, setFetchAgain }) => {
             height={"100%"}
             backgroundColor={"#E8E8E8"}
             overflowY={"hidden"}
+            borderRadius={"0.7rem"}
+            className="messages"
           >
             {loading ? (
               <Spinner

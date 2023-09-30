@@ -22,13 +22,13 @@ https://chat-xjp3.onrender.com/
 Clone the project
 
 ```bash
-  git clone https://github.com/piyush-eon/mern-chat-app
+  git clone https://github.com/Om206/ChatApplication-Using-MERN-Stack.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd mern-chat-app
+  cd ChatApplication-Using-MERN-Stack/server
 ```
 
 Install dependencies
@@ -38,20 +38,22 @@ Install dependencies
 ```
 
 ```bash
-  cd frontend/
+  cd ../frontend/
   npm install
 ```
 
 Start the server
+Move to Server folder
 
 ```bash
+  cd ../server
   npm run start
 ```
 
 Start the Client
 
 ```bash
-  //open now terminal
+  //open new terminal
   cd frontend
   npm start
 ```
@@ -93,4 +95,4 @@ Start the Client
 
 ## Made By
 
-- [@Piyush-eon](https://github.com/piyush-eon)
+- [@Om206](https://github.com/Om206)
