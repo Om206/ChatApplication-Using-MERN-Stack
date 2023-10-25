@@ -65,7 +65,7 @@ Start the Client
 ![](https://github.com/Om206/ChatApplication-Using-MERN-Stack/blob/main/screenshots/login.PNG)
 ![](https://github.com/Om206/ChatApplication-Using-MERN-Stack/blob/main/screenshots/signup.PNG)
 
-### Real Time Chatting with Typing indicators
+### Real Time Chatting
 
 ![](https://github.com/Om206/ChatApplication-Using-MERN-Stack/blob/main/screenshots/real-time.PNG)
 
@@ -91,7 +91,7 @@ Start the Client
 
 ### View Other user Profile
 
-![](https://github.com/Om206/ChatApplication-Using-MERN-Stack/blob/main/screenshots/profile.PNG)
+![](https://github.com/Om206/Real-Time-Chat-Application-with-the-MERN-Stack/blob/main/screenshots/Profil.png)
 
 ## Made By
 
