@@ -16,7 +16,7 @@
   "scripts": {
   "start": "nodemon app.js",
   "server": "nodemon app.js",
-  "build": "npm install --legacy-peer-deps --prefix server && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+  "build": "npm install --legacy-peer-deps --prefix server"
 },
 
   "author": "Op",
