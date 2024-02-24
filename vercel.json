@@ -1,0 +1,6 @@
+{
+    "version": 2,
+    "name": "chat-server",
+    "builds":[{ "src":"server/app.js","@vercel/node"}],
+    "routes":[{"src":"server/(.*)", "dest":"server/app.js"}]
+}
