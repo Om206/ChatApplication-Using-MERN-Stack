@@ -18,7 +18,7 @@ import axios from "axios";
 import "./styles.css";
 import ScrollableChat from "./ScrollableChat";
 
-const ENDPOINT = "https://chat-xjp3.onrender.com";
+const ENDPOINT = "https://chat-server-eight-henna.vercel.app";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ featchAgain, setFetchAgain }) => {
