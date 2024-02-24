@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm install --legacy-peer-deps --prefix server && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend",
+    "build": "npm install --legacy-peer-deps --prefix server && npm install --legacy-peer-deps --prefix . && npm run build --prefix .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
