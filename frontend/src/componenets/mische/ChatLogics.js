@@ -1,5 +1,3 @@
-import { keyframes } from "@emotion/react";
-
 export const getSender = (loggedUser, users) => {
   return users[0]._id === loggedUser.data._id ? users[1].name : users[0].name;
 };
@@ -36,7 +34,7 @@ export const isSameSenderMargin = (message, m, i, userId) => {
     (i < message.length - 1 &&
       message[i + 1].sender._id !== m.sender._id &&
       message[i].sender._id !== userId) ||
-    (i == message.length - 1 && message[i].sender._id !== userId)
+    (i === message.length - 1 && message[i].sender._id !== userId)
   ) {
     return 0;
   } else {

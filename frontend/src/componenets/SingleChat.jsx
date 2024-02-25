@@ -18,7 +18,7 @@ import axios from "axios";
 import "./styles.css";
 import ScrollableChat from "./ScrollableChat";
 
-const ENDPOINT = "https://chat-server-veui.vercel.app";
+const ENDPOINT = "https://chat-server-op.up.railway.app";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ featchAgain, setFetchAgain }) => {
