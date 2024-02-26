@@ -20,7 +20,10 @@ const MyChats = ({ featchAgain }) => {
           authorization: `Bearer ${user.data.token}`,
         },
       };
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get(
+        "chat-server-op.up.railway.app/api/chat",
+        config
+      );
       console.log(data);
       setChats(data);
     } catch (error) {

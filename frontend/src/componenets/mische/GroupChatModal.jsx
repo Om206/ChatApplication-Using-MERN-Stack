@@ -44,7 +44,10 @@ const GroupChatModal = ({ children }) => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `chat-server-op.up.railway.app/api/user?search=${search}`,
+        config
+      );
       console.log(data);
       setSearchResult(data);
       setLoading(false);
@@ -98,7 +101,7 @@ const GroupChatModal = ({ children }) => {
 
       console.log(selectedUsers.length);
       const { data } = await axios.post(
-        "/api/chat/group",
+        "chat-server-op.up.railway.app/api/chat/group",
         {
           name: groupChatName,
           users: selectedUsers.map((u) => u._id),

@@ -69,7 +69,7 @@ const SingleChat = ({ featchAgain, setFetchAgain }) => {
       };
       setLoading(true);
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `chat-server-op.up.railway.app/api/message/${selectedChat._id}`,
         config
       );
       // console.log(message);
@@ -108,7 +108,7 @@ const SingleChat = ({ featchAgain, setFetchAgain }) => {
         };
 
         const { data } = await axios.post(
-          "/api/message",
+          "chat-server-op.up.railway.app/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

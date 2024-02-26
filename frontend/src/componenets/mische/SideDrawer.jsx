@@ -77,7 +77,10 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `chat-server-op.up.railway.app/api/user?search=${search}`,
+        config
+      );
       setLoading(false);
       // console.log(data);
       setSearchResult(data);
@@ -103,7 +106,11 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await axios.post("/api/chat", { userId }, config);
+      const { data } = await axios.post(
+        "chat-server-op.up.railway.app/api/chat",
+        { userId },
+        config
+      );
 
       // console.log(data);
 

@@ -101,7 +101,7 @@ const SignUp = () => {
     }
 
     try {
-      const data = await axios.post("/api/user/", {
+      const data = await axios.post("chat-server-op.up.railway.app/api/user/", {
         name: name,
         email: email,
         password: password,

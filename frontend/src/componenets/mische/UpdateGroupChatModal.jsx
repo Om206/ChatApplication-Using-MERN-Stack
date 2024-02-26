@@ -61,7 +61,7 @@ const UpdateGroupChatModal = ({
     try {
       setLoading(true);
       const { data } = await axios.put(
-        "/api/chat/groupremove",
+        "chat-server-op.up.railway.app/api/chat/groupremove",
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -117,7 +117,7 @@ const UpdateGroupChatModal = ({
       };
 
       const { data } = await axios.put(
-        "api/chat/groupAdd",
+        "chat-server-op.up.railway.app/api/chat/groupAdd",
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -151,7 +151,7 @@ const UpdateGroupChatModal = ({
       };
 
       const { data } = await axios.put(
-        "/api/chat/rename",
+        "chat-server-op.up.railway.app/api/chat/rename",
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -191,7 +191,10 @@ const UpdateGroupChatModal = ({
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `chat-server-op.up.railway.app/api/user?search=${search}`,
+        config
+      );
       console.log(data);
       setSearchResult(data);
       setLoading(false);
