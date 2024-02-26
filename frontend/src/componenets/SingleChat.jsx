@@ -17,8 +17,8 @@ import UpdateGroupChatModal from "./mische/UpdateGroupChatModal";
 import axios from "axios";
 import "./styles.css";
 import ScrollableChat from "./ScrollableChat";
-
-const ENDPOINT = "https://chat-server-op.up.railway.app";
+import url from "./provider.js";
+const ENDPOINT = url;
 var socket, selectedChatCompare;
 
 const SingleChat = ({ featchAgain, setFetchAgain }) => {
@@ -69,7 +69,7 @@ const SingleChat = ({ featchAgain, setFetchAgain }) => {
       };
       setLoading(true);
       const { data } = await axios.get(
-        `chat-server-op.up.railway.app/api/message/${selectedChat._id}`,
+        `${ENDPOINT}/api/message/${selectedChat._id}`,
         config
       );
       // console.log(message);
@@ -108,7 +108,7 @@ const SingleChat = ({ featchAgain, setFetchAgain }) => {
         };
 
         const { data } = await axios.post(
-          "chat-server-op.up.railway.app/api/message",
+          `${ENDPOINT}/api/message`,
           {
             content: newMessage,
             chatId: selectedChat._id,

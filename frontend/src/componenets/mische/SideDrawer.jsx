@@ -32,6 +32,9 @@ import UserListItem from "../UserAvator/UserListItem";
 import { getSender } from "./ChatLogics";
 import NotificationBadge from "react-notification-badge";
 import { Effect } from "react-notification-badge";
+import url from "../provider";
+
+const backend = url;
 
 const SideDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -78,7 +81,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.get(
-        `chat-server-op.up.railway.app/api/user?search=${search}`,
+        `${backend}/api/user?search=${search}`,
         config
       );
       setLoading(false);
@@ -107,7 +110,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.post(
-        "chat-server-op.up.railway.app/api/chat",
+        `${backend}/api/chat`,
         { userId },
         config
       );

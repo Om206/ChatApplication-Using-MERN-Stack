@@ -11,6 +11,9 @@ import {
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import url from "../provider";
+
+const backen = url;
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -101,7 +104,7 @@ const SignUp = () => {
     }
 
     try {
-      const data = await axios.post("chat-server-op.up.railway.app/api/user/", {
+      const data = await axios.post(`${backen}/api/user/`, {
         name: name,
         email: email,
         password: password,

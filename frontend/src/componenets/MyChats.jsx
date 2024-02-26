@@ -6,7 +6,9 @@ import { AiOutlinePlus } from "react-icons/ai";
 import ChatLoading from "./ChatLoading";
 import { getSender } from "./mische/ChatLogics";
 import GroupChatModal from "./mische/GroupChatModal";
+import url from "./provider";
 
+const backend = url;
 const MyChats = ({ featchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
   const { user, selectedChat, setSelectedChat, chats, setChats } = ChatState();
@@ -20,10 +22,7 @@ const MyChats = ({ featchAgain }) => {
           authorization: `Bearer ${user.data.token}`,
         },
       };
-      const { data } = await axios.get(
-        "https://chat-server-op.up.railway.app/api/chat",
-        config
-      );
+      const { data } = await axios.get(`${backend}/api/chat`, config);
       console.log(data);
       setChats(data);
     } catch (error) {

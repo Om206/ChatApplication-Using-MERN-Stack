@@ -11,6 +11,10 @@ import {
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import url from "../provider";
+
+const backend = url;
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,13 +38,10 @@ const Login = () => {
     }
 
     try {
-      const data = await axios.post(
-        "https://chat-server-op.up.railway.app/api/user/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
+      const data = await axios.post(`${backend}/api/user/login`, {
+        email: email,
+        password: password,
+      });
       toast({
         title: "Login Sccessful",
         status: "success",

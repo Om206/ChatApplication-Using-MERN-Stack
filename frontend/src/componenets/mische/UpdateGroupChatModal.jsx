@@ -21,7 +21,9 @@ import { ChatState } from "../../Context/ChatProvider";
 import UserBadgeItem from "../UserAvator/UserBadgeItem";
 import axios from "axios";
 import UserListItem from "../UserAvator/UserListItem";
+import url from "../provider";
 
+const backen = url;
 const UpdateGroupChatModal = ({
   featchAgain,
   setFetchAgain,
@@ -61,7 +63,7 @@ const UpdateGroupChatModal = ({
     try {
       setLoading(true);
       const { data } = await axios.put(
-        "chat-server-op.up.railway.app/api/chat/groupremove",
+        `${backen}/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -117,7 +119,7 @@ const UpdateGroupChatModal = ({
       };
 
       const { data } = await axios.put(
-        "chat-server-op.up.railway.app/api/chat/groupAdd",
+        `${backen}/api/chat/groupAdd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -151,7 +153,7 @@ const UpdateGroupChatModal = ({
       };
 
       const { data } = await axios.put(
-        "chat-server-op.up.railway.app/api/chat/rename",
+        `${backen}/api/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -192,7 +194,7 @@ const UpdateGroupChatModal = ({
       };
 
       const { data } = await axios.get(
-        `chat-server-op.up.railway.app/api/user?search=${search}`,
+        `${backen}/api/user?search=${search}`,
         config
       );
       console.log(data);

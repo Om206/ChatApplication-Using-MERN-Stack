@@ -18,6 +18,9 @@ import { ChatState } from "../../Context/ChatProvider";
 import axios from "axios";
 import UserListItem from "../UserAvator/UserListItem";
 import UserBadgeItem from "../UserAvator/UserBadgeItem";
+import url from "../provider";
+
+const backen = url;
 
 const GroupChatModal = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,7 +48,7 @@ const GroupChatModal = ({ children }) => {
       };
 
       const { data } = await axios.get(
-        `chat-server-op.up.railway.app/api/user?search=${search}`,
+        `${backen}/api/user?search=${search}`,
         config
       );
       console.log(data);
@@ -101,7 +104,7 @@ const GroupChatModal = ({ children }) => {
 
       console.log(selectedUsers.length);
       const { data } = await axios.post(
-        "chat-server-op.up.railway.app/api/chat/group",
+        `${backen}/api/chat/group`,
         {
           name: groupChatName,
           users: selectedUsers.map((u) => u._id),
