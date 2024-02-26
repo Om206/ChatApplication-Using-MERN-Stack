@@ -21,7 +21,7 @@ const MyChats = ({ featchAgain }) => {
         },
       };
       const { data } = await axios.get(
-        "chat-server-op.up.railway.app/api/chat",
+        "https://chat-server-op.up.railway.app/api/chat",
         config
       );
       console.log(data);

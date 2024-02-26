@@ -35,7 +35,7 @@ const Login = () => {
 
     try {
       const data = await axios.post(
-        "chat-server-op.up.railway.app/api/user/login",
+        "https://chat-server-op.up.railway.app/api/user/login",
         {
           email: email,
           password: password,
